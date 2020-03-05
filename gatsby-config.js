@@ -3,7 +3,7 @@ module.exports = {
     title: `J. Cachada Personal Website`,
     author: {
       name: `João Cachada`,
-      summary: `Awesome dude.`,
+      summary: `awesome dude.`,
     },
     description: `A personal website for all of my j.cachada needs.`,
     siteUrl: `https://jcachada.dev`,
