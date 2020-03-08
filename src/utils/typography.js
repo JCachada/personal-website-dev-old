@@ -18,6 +18,10 @@ if (process.env.NODE_ENV !== `production`) {
   typography.injectStyles()
 }
 
+typography.options.bodyColor = "white" 
+typography.options.headerFontFamily =  ['Times New Roman', 'Times', 'Serif']
+
 export default typography
 export const rhythm = typography.rhythm
 export const scale = typography.scale
+export const options = typography.options
