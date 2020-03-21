@@ -1,8 +1,29 @@
 import React from "react"
 import { Link } from "gatsby"
 import { rhythm, scale } from "../utils/typography"
+import { useStaticQuery, graphql } from "gatsby"
+import Image from "gatsby-image"
 
 const Layout = ({ location, title, children }) => {
+  const data = useStaticQuery(graphql`
+    query instaQuery {
+      instagram: file(absolutePath: { regex: "/instagram-icon.png/" }) {
+        childImageSharp {
+          fixed(width: 30, height: 30) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      github: file(absolutePath: { regex: "/github-icon.png/" }) {
+        childImageSharp {
+          fixed(width: 30, height: 30) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+    }
+  `)
+
   const rootPath = `${__PATH_PREFIX__}/`
   let header
 
@@ -52,10 +73,15 @@ const Layout = ({ location, title, children }) => {
       style={{
         marginLeft: `auto`,
         marginRight: `auto`,
-        padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
       }}
     >
-      <header style={{}}>{header}</header>
+      <header
+        style={{
+          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+        }}
+      >
+        {header}
+      </header>
       <main
         style={{
           marginLeft: `auto`,
@@ -66,11 +92,50 @@ const Layout = ({ location, title, children }) => {
       >
         {children}
       </main>
-      <footer>
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.org">Gatsby</a>
-      </footer>
+      <div
+        style={{
+          backgroundColor: "#1b191f",
+          padding: `${rhythm(0.2)} ${rhythm(3 / 4)}`,
+          textAlign: "center",
+        }}
+      >
+        <footer>
+          <a
+            href={`https://instagram.com/j.cachada`}
+            style={{ boxShadow: "none" }}
+          >
+            <Image
+              fixed={data.instagram.childImageSharp.fixed}
+              alt={"instagram-icon"}
+              style={{
+                marginRight: rhythm(1 / 2),
+                marginBottom: 0,
+                minWidth: 0,
+                borderRadius: `0%`,
+              }}
+              imgStyle={{
+                borderRadius: `0%`,
+              }}
+            />
+          </a>
+          <a href={`https://github.com/JCachada`} style={{ boxShadow: "none" }}>
+            <Image
+              fixed={data.github.childImageSharp.fixed}
+              alt={"github-icon"}
+              style={{
+                marginRight: rhythm(1 / 2),
+                marginBottom: 0,
+                marginTop: 0,
+                minWidth: 0,
+                borderRadius: `0%`,
+              }}
+              imgStyle={{
+                borderRadius: `0%`,
+              }}
+            />
+          </a>
+        </footer>
+      </div>
     </div>
   )
 }
