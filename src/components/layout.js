@@ -125,7 +125,7 @@ const Layout = ({ location, title, children }) => {
       </main>
       <div
         style={{
-          position: "fixed",
+          position: "absolute",
           bottom: 0,
           width: "100%",
           backgroundColor: "#1b191f",
