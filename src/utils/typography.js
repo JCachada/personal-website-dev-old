@@ -19,7 +19,13 @@ if (process.env.NODE_ENV !== `production`) {
 }
 
 typography.options.bodyColor = "white" 
-typography.options.headerFontFamily =  ['Times New Roman', 'Times', 'Serif']
+
+typography.options.overrideThemeStyles = ({ adjustFontSizeTo, rhythm }, options, styles) => ({
+  blockquote: {
+    color: 'white',
+    fontStyle: 'italic'
+  }
+})
 
 export default typography
 export const rhythm = typography.rhythm

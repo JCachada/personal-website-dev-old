@@ -6,7 +6,7 @@ import Image from "gatsby-image"
 
 const Layout = ({ location, title, children }) => {
   const data = useStaticQuery(graphql`
-    query instaQuery {
+    query footerQuery {
       instagram: file(absolutePath: { regex: "/instagram-icon.png/" }) {
         childImageSharp {
           fixed(width: 30, height: 30) {
@@ -21,6 +21,13 @@ const Layout = ({ location, title, children }) => {
           }
         }
       }
+      discord: file(absolutePath: { regex: "/discord-icon.png/" }) {
+        childImageSharp {
+          fixed(width: 30, height: 30) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
     }
   `)
 
@@ -29,24 +36,36 @@ const Layout = ({ location, title, children }) => {
 
   if (location.pathname === rootPath) {
     header = (
-      <h1
-        style={{
-          ...scale(1.5),
-          marginBottom: rhythm(1.5),
-          marginTop: 0,
-        }}
-      >
-        <Link
+        <h1
           style={{
-            boxShadow: `none`,
-            textDecoration: `none`,
-            color: `inherit`,
+            ...scale(0.5),
+            marginBottom: rhythm(0),
+            marginTop: 0,
           }}
-          to={`/`}
         >
-          {title}
-        </Link>
-      </h1>
+          <Link
+            style={{
+              boxShadow: `none`,
+              textDecoration: `none`,
+              color: `inherit`,
+            }}
+            to={`/`}
+          >
+          Home                                  
+          </Link>
+          <Link
+            style={{
+              ...scale(0.3),
+              boxShadow: `none`,
+              textDecoration: `none`,
+              color: `#635e69`,
+              paddingLeft: '20px'
+            }}
+            to={`/blog`}
+          >
+            Blog
+          </Link>
+        </h1>
     )
   } else {
     header = (
@@ -63,8 +82,20 @@ const Layout = ({ location, title, children }) => {
           }}
           to={`/`}
         >
-          {title}
+          Home
         </Link>
+        <Link
+            style={{
+              ...scale(0.3),
+              boxShadow: `none`,
+              textDecoration: `none`,
+              color: `#635e69`,
+              paddingLeft: '20px'
+            }}
+            to={`/blog`}
+          >
+            Blog
+          </Link>
       </h3>
     )
   }
@@ -77,7 +108,7 @@ const Layout = ({ location, title, children }) => {
     >
       <header
         style={{
-          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+          padding: `${rhythm(0.7)} ${rhythm(3 / 4)}`,
         }}
       >
         {header}
@@ -94,15 +125,18 @@ const Layout = ({ location, title, children }) => {
       </main>
       <div
         style={{
+          position: "fixed",
+          bottom: 0,
+          width: "100%",
           backgroundColor: "#1b191f",
-          padding: `${rhythm(0.2)} ${rhythm(3 / 4)}`,
           textAlign: "center",
+          padding: `${rhythm(0.6)} ${rhythm(0)}`,
         }}
       >
         <footer>
           <a
             href={`https://instagram.com/j.cachada`}
-            style={{ boxShadow: "none" }}
+            style={{ boxShadow: "none", verticalAlign: "middle"}}
           >
             <Image
               fixed={data.instagram.childImageSharp.fixed}
@@ -118,10 +152,32 @@ const Layout = ({ location, title, children }) => {
               }}
             />
           </a>
-          <a href={`https://github.com/JCachada`} style={{ boxShadow: "none" }}>
+          <a
+            href={`https://github.com/JCachada`}
+            style={{ boxShadow: "none", verticalAlign: "middle" }}
+          >
             <Image
               fixed={data.github.childImageSharp.fixed}
               alt={"github-icon"}
+              style={{
+                marginRight: rhythm(1 / 2),
+                marginBottom: 0,
+                marginTop: 0,
+                minWidth: 0,
+                borderRadius: `0%`,
+              }}
+              imgStyle={{
+                borderRadius: `0%`,
+              }}
+            />
+          </a>
+          <a
+            href={`https://github.com/JCachada`}
+            style={{ boxShadow: "none", verticalAlign: "middle" }}
+          >
+            <Image
+              fixed={data.discord.childImageSharp.fixed}
+              alt={"discord-icon"}
               style={{
                 marginRight: rhythm(1 / 2),
                 marginBottom: 0,
