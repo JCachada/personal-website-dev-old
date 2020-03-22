@@ -34,71 +34,86 @@ const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   let header
 
-  if (location.pathname === rootPath) {
-    header = (
-        <h1
-          style={{
-            ...scale(0.5),
-            marginBottom: rhythm(0),
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={`/`}
-          >
-          Home                                  
-          </Link>
-          <Link
-            style={{
-              ...scale(0.3),
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `#635e69`,
-              paddingLeft: '20px'
-            }}
-            to={`/blog`}
-          >
-            Blog
-          </Link>
-        </h1>
-    )
-  } else {
-    header = (
-      <h3
+  header = (
+    <h3
+      style={{
+        marginBottom: rhythm(0),
+        marginTop: 0,
+      }}
+    >
+      <Link
         style={{
-          marginTop: 0,
+          boxShadow: `none`,
+          textDecoration: `none`,
+          color: `inherit`,
         }}
+        to={`/`}
       >
-        <Link
-          style={{
-            boxShadow: `none`,
-            textDecoration: `none`,
-            color: `inherit`,
-          }}
-          to={`/`}
-        >
-          Home
-        </Link>
-        <Link
-            style={{
-              ...scale(0.3),
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `#635e69`,
-              paddingLeft: '20px'
-            }}
-            to={`/blog`}
-          >
-            Blog
-          </Link>
-      </h3>
-    )
-  }
+        Home
+      </Link>
+      <Link
+        style={{
+          ...scale(0.3),
+          boxShadow: `none`,
+          textDecoration: `none`,
+          color: `#635e69`,
+          paddingLeft: "20px",
+        }}
+        to={`/am-I-any-good`}
+      >
+        Am I any good?
+      </Link>
+      <Link
+        style={{
+          ...scale(0.3),
+          boxShadow: `none`,
+          textDecoration: `none`,
+          color: `#635e69`,
+          paddingLeft: "20px",
+        }}
+        to={`/blog`}
+      >
+        Blog
+      </Link>
+      <Link
+        style={{
+          ...scale(0.3),
+          boxShadow: `none`,
+          textDecoration: `none`,
+          color: `#635e69`,
+          paddingLeft: "20px",
+        }}
+        to={`/writing`}
+      >
+        Writing
+      </Link>
+      <Link
+        style={{
+          ...scale(0.3),
+          boxShadow: `none`,
+          textDecoration: `none`,
+          color: `#635e69`,
+          paddingLeft: "20px",
+        }}
+        to={`/games`}
+      >
+        Games
+      </Link>
+      <Link
+        style={{
+          ...scale(0.3),
+          boxShadow: `none`,
+          textDecoration: `none`,
+          color: `#635e69`,
+          paddingLeft: "20px",
+        }}
+        to={'/about'}
+      >
+        About
+      </Link>
+    </h3>
+  )
+
   return (
     <div
       style={{
@@ -108,6 +123,7 @@ const Layout = ({ location, title, children }) => {
     >
       <header
         style={{
+          boxShadow: "0px 1px 1px 0px rgba(35,33,41,1)",
           padding: `${rhythm(0.7)} ${rhythm(3 / 4)}`,
         }}
       >
@@ -118,7 +134,7 @@ const Layout = ({ location, title, children }) => {
           marginLeft: `auto`,
           marginRight: `auto`,
           maxWidth: rhythm(24),
-          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+          padding: `${rhythm(0)} ${rhythm(3 / 4)}`,
         }}
       >
         {children}
@@ -136,7 +152,7 @@ const Layout = ({ location, title, children }) => {
         <footer>
           <a
             href={`https://instagram.com/j.cachada`}
-            style={{ boxShadow: "none", verticalAlign: "middle"}}
+            style={{ boxShadow: "none", verticalAlign: "middle" }}
           >
             <Image
               fixed={data.instagram.childImageSharp.fixed}

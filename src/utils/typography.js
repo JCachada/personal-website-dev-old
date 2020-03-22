@@ -19,6 +19,7 @@ if (process.env.NODE_ENV !== `production`) {
 }
 
 typography.options.bodyColor = "white" 
+typography.options.headerWeight = "500"
 
 typography.options.overrideThemeStyles = ({ adjustFontSizeTo, rhythm }, options, styles) => ({
   blockquote: {
