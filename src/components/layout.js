@@ -31,14 +31,13 @@ const Layout = ({ location, title, children }) => {
     }
   `)
 
-  const rootPath = `${__PATH_PREFIX__}/`
   let header
 
   header = (
     <h3
       style={{
         marginBottom: rhythm(0),
-        marginTop: 0,
+        marginTop: 0
       }}
     >
       <Link
@@ -131,6 +130,7 @@ const Layout = ({ location, title, children }) => {
       </header>
       <main
         style={{
+          fontSize: "18px",
           marginLeft: `auto`,
           marginRight: `auto`,
           maxWidth: rhythm(24),

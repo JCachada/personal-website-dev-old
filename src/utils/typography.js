@@ -13,6 +13,7 @@ delete Wordpress2016.googleFonts
 
 const typography = new Typography(Wordpress2016)
 
+
 // Hot reload typography in development.
 if (process.env.NODE_ENV !== `production`) {
   typography.injectStyles()
@@ -21,7 +22,7 @@ if (process.env.NODE_ENV !== `production`) {
 typography.options.bodyColor = "white" 
 typography.options.headerWeight = "500"
 
-typography.options.overrideThemeStyles = ({ adjustFontSizeTo, rhythm }, options, styles) => ({
+typography.options.overrideThemeStyles = () => ({
   blockquote: {
     color: 'white',
     fontStyle: 'italic'

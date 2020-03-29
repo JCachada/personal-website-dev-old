@@ -1,12 +1,12 @@
 ---
 title: "Mission Statement: This blog, the website, and more."
-date: "2029-03-26T18:57:03.284Z"
+date: "2020-03-26T18:57:03.284Z"
 description: "A description of the purpose of this blog and things that are to come."
 ---
 
 In 2013, I went to college. I didn't really know what I wanted to go to college for, and I ended up choosing Philosophy as a major because I thought it would give me a broad spectrum of skills and sort of postpone the actual decision of what I wanted to do with my life.
 
-Philosophy is a great major. I'm very grateful for the things that I learned there, and I wish the state of humanities' academia in Portugal wasn't such that even the most skilled of students have no place at universities and aren't particularly valued by the private sector. But that was the case, and I soon realized that I would have a very hard time finding a job related to my studies.
+Philosophy is a great major. I'm very grateful for the things that I learned during my time studying it, and I wish the state of humanities' academia in Portugal wasn't such that even the most skilled of students have no place at universities and aren't particularly valued by the private sector. But that was the case, and I soon realized that I would have a very hard time finding a job related to my studies.
 
 I am not, however, someone who likes to wait idly for things to get better. So I tried to figure out how I could leverage my work and the things that I liked into a proper career. At first that meant getting a Master's in American Literature and American Culture. I thought I could at least get a job as a translator while I looked for something better, and surely a Master's degree completed with honors would mean something.
 
@@ -106,6 +106,7 @@ func moveThroughPath(path):
 		if path.size() < 2:
 			path = []
 ```
+<p></p>
 
 This way you declutter the actual method that's telling the story - and whoever's invested in it enough to want to get into the nitty gritty, instead of just getting an idea of how the system works, can go to the secondary method ´moveThroughPath´ and find out. 
 

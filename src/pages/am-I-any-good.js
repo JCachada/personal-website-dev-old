@@ -33,6 +33,8 @@ const IsHeAnyGood = ({ location }) => {
           <header>
             <h3
               style={{
+                fontSize: "36px",
+                fontWeight: "bold",
                 marginBottom: rhythm(1 / 4),
               }}
             >
@@ -68,6 +70,8 @@ const IsHeAnyGood = ({ location }) => {
           <header>
             <h3
               style={{
+                fontSize: "28px",
+                fontWeight: "bolder",
                 marginTop: 0,
                 marginBottom: rhythm(1 / 4),
               }}
@@ -82,6 +86,8 @@ const IsHeAnyGood = ({ location }) => {
           <header>
             <h3
               style={{
+                fontSize: "28px",
+                fontWeight: "bold",
                 marginTop: 0,
                 marginBottom: rhythm(1 / 4),
               }}
@@ -96,7 +102,7 @@ const IsHeAnyGood = ({ location }) => {
               asked...
             </p>
             <p>
-              <ul>
+              <ul style={{paddingLeft: "40px"}}>
                 <li>
                   I finished my B.A. at 20 years old and my Master's at 23. I
                   was top of my class in both.
@@ -130,6 +136,8 @@ const IsHeAnyGood = ({ location }) => {
           <header>
             <h3
               style={{
+                fontSize: "28px",
+                fontWeight: "bold",
                 marginTop: 0,
                 marginBottom: rhythm(1 / 4),
               }}
@@ -141,7 +149,7 @@ const IsHeAnyGood = ({ location }) => {
             <p></p>
             <p>Okay, you're right. So here's a bunch of fun stuff about me:</p>
             <p>
-              <ul>
+              <ul style={{paddingLeft: "40px"}}>
                 <li>
                   I used to be a competitive video game player. I was the #1
                   ranked player in the world at GWENT: The Witcher Card Game for
