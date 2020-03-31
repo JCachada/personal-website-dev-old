@@ -4,6 +4,7 @@ import React from "react"
 import { rhythm } from "../utils/typography"
 import { useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
+import CenteredText from "../components/centered-text"
 
 const IsHeAnyGood = ({ location }) => {
   const data = useStaticQuery(graphql`
@@ -27,6 +28,7 @@ const IsHeAnyGood = ({ location }) => {
 
   return (
     <Layout location={location} title="Am I any good?">
+      <CenteredText>
       <SEO title="Am I any good?" />
       <div>
         <article>
@@ -195,10 +197,10 @@ const IsHeAnyGood = ({ location }) => {
               If you're still not convinced, feel free to check out my work, my
               résumé, and my ramblings.
             </p>
-            <p>""</p>
           </section>
         </article>
       </div>
+      </CenteredText>
     </Layout>
   )
 }

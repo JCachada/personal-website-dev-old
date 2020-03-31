@@ -2,10 +2,12 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import React from "react"
 import { rhythm } from "../utils/typography"
+import CenteredText from "../components/centered-text"
 
 const About = ({ location }) => {
   return (
     <Layout location={location} title="About me">
+      <CenteredText>
       <SEO title="About me" />
       <div>
         <article>
@@ -54,12 +56,10 @@ const About = ({ location }) => {
               Thanks for checking my website out. I hope you found what you were
               looking for!
             </p>
-            <br></br>
-            <br></br>
-            <br></br>
           </section>
         </article>
       </div>
+      </CenteredText>
     </Layout>
   )
 }

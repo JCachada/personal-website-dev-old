@@ -37,7 +37,7 @@ const Layout = ({ location, title, children }) => {
     <h3
       style={{
         marginBottom: rhythm(0),
-        marginTop: 0
+        marginTop: 0,
       }}
     >
       <Link
@@ -106,7 +106,7 @@ const Layout = ({ location, title, children }) => {
           color: `#635e69`,
           paddingLeft: "20px",
         }}
-        to={'/about'}
+        to={"/about"}
       >
         About
       </Link>
@@ -128,28 +128,22 @@ const Layout = ({ location, title, children }) => {
       >
         {header}
       </header>
-      <main
-        style={{
-          fontSize: "18px",
-          marginLeft: `auto`,
-          marginRight: `auto`,
-          maxWidth: rhythm(24),
-          padding: `${rhythm(0)} ${rhythm(3 / 4)}`,
-        }}
-      >
-        {children}
-      </main>
+      {children}
       <div
         style={{
           position: "absolute",
           bottom: 0,
           width: "100%",
-          backgroundColor: "#1b191f",
           textAlign: "center",
           padding: `${rhythm(0.6)} ${rhythm(0)}`,
         }}
       >
-        <footer>
+        <footer
+          style={{
+            paddingTop: `${rhythm(0.6)}`,
+            boxShadow: "0px -1px 1px rgba(35,33,41,1)",
+          }}
+        >
           <a
             href={`https://instagram.com/j.cachada`}
             style={{ boxShadow: "none", verticalAlign: "middle" }}

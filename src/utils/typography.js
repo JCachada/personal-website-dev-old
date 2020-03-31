@@ -19,7 +19,7 @@ if (process.env.NODE_ENV !== `production`) {
   typography.injectStyles()
 }
 
-typography.options.bodyColor = "white" 
+typography.options.bodyColor = "#d9d7e0" 
 typography.options.headerWeight = "500"
 
 typography.options.overrideThemeStyles = () => ({
