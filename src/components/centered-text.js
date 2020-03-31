@@ -9,6 +9,7 @@ const CenteredText = ({ children }) => {
       marginRight: `auto`,
       maxWidth: rhythm(24),
       padding: `${rhythm(0)} ${rhythm(3 / 4)} ${rhythm(3)}`,
+      wordWrap: "normal"
     }}
   >
     {children}
