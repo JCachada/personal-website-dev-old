@@ -8,12 +8,15 @@ const LeftAlignedColumnText = ({ children }) => {
         fontSize: "18px",
         marginLeft: `auto`,
         marginRight: `auto`,
-        maxWidth: rhythm(35),
+        maxWidth: rhythm(45),
         padding: `${rhythm(0)} ${rhythm(3)} ${rhythm(3)} ${rhythm(3)}`,
       }}
     >
       <div class="row">
-        <div class="column" style={{ float: "left", width: "50%" }}>
+        <div
+          class="column"
+          style={{ float: "left", width: "50%", paddingBottom: `${rhythm(3.2)}` }}
+        >
           {children}
         </div>
       </div>
