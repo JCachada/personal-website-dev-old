@@ -4,8 +4,15 @@ import { rhythm } from "../utils/typography"
 const LeftAlignedColumn = ({ children }) => {
   return (
     <div
-      class="column"
-      style={{ float: "left", width: "50%", paddingBottom: `${rhythm(3.2)}`, minWidth: "200px"}}
+      css={{
+        float: "right",
+        paddingBottom: `${rhythm(3.2)}`,
+        width: "50%",
+        "@media (max-width: 750px)": { width: "100%", float: "none", paddingBottom: "0" },
+      }}
+      style={{
+        minWidth: "200px",
+      }}
     >
       {children}
     </div>
