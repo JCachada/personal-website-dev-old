@@ -19,13 +19,19 @@ if (process.env.NODE_ENV !== `production`) {
   typography.injectStyles()
 }
 
-typography.options.bodyColor = "#d9d7e0" 
+  
+typography.options.bodyColor = "#c0c0c0";
 typography.options.headerWeight = "500"
 
 typography.options.overrideThemeStyles = () => ({
   blockquote: {
     color: 'white',
     fontStyle: 'italic'
+  },
+  a: 
+  {
+    color: "#96c4eb",
+    textdecoration: "wavy"
   }
 })
 
