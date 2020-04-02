@@ -21,9 +21,6 @@ const Index = ({ data }) => {
             I made this website so you can keep up with whatever I'm doing at
             the moment.
           </p>
-        </LeftAlignedColumn>
-
-        <RightAlignedColumn>
           <h2>Last Post:</h2>
 
           {posts.map(({ node }) => {
@@ -50,6 +47,22 @@ const Index = ({ data }) => {
               </article>
             )
           })}
+        </LeftAlignedColumn>
+
+        <RightAlignedColumn>
+          <h2>Current Projects:</h2>
+
+          <h3>Untitled Videogame</h3>
+          <h4>Last update:</h4>
+
+          <h3>Untitled Book</h3>
+          <h4>Last update:</h4>
+
+          <link
+            href="https://fonts.googleapis.com/css?family=Raleway:400,300,600,800,900"
+            rel="stylesheet"
+            type="text/css"
+          ></link>
         </RightAlignedColumn>
       </TwoColumnRow>
     </Layout>
