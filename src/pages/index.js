@@ -144,7 +144,7 @@ const Index = ({ data }) => {
             />
           </a>
           <a
-            href={`https://graphql.org/`}
+            href={`https://www.w3schools.com/css/`}
             style={{ boxShadow: "none", verticalAlign: "middle" }}
           >
             <Image
