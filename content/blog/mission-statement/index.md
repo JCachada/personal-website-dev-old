@@ -1,5 +1,6 @@
 ---
 title: "Mission Statement: This blog, the website, and more."
+tags: ["blog", "career", "general"]
 date: "2020-03-26T18:57:03.284Z"
 description: "A description of the purpose of this blog and things that are to come."
 ---
