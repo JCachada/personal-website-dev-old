@@ -7,7 +7,8 @@ const RightAlignedColumn = ({ children }) => {
     css={{
         float: "right",
         width: "50%",
-        "@media (max-width: 750px)": { width: "100%", float: "none" },
+        paddingLeft:  `${rhythm(3.2)}`,
+        "@media (max-width: 750px)": { width: "100%", float: "none", paddingLeft: `${rhythm(0)}`},
       }}
       style={{
         paddingBottom: `${rhythm(3.2)}`,

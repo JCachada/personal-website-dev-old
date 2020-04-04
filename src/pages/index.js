@@ -7,229 +7,359 @@ import { rhythm } from "../utils/typography"
 import RightAlignedColumn from "../components/right-aligned-column"
 import TwoColumnRow from "../components/two-column-row"
 import Image from "gatsby-image"
+import { ThemeProvider } from "theme-ui"
+import { useColorMode } from "theme-ui"
+import ChangeThemeButton from "../components/change-theme-button"
 
 const Index = ({ data }) => {
   const lastPost = data.mostRecentPost.edges
   const lastGamePost = data.mostRecentGamePost.edges
   const lastBookPost = data.mostRecentBookPost.edges
+  let builtWith
+
+  const [colorMode] = useColorMode()
+
+  if (colorMode === "light") {
+    builtWith = (
+      <div>
+        <a
+          href={`https://www.gatsbyjs.org/`}
+          style={{ boxShadow: "none", verticalAlign: "middle" }}
+        >
+          <Image
+            fixed={data.gatsbyLogoLight.childImageSharp.fixed}
+            alt={"gatsby-icon-light"}
+            style={{
+              marginRight: rhythm(1 / 2),
+              marginBottom: 0,
+              minWidth: 0,
+              borderRadius: `0%`,
+            }}
+            imgStyle={{
+              borderRadius: `0%`,
+            }}
+          />
+        </a>
+        <a
+          href={`https://reactjs.org/`}
+          style={{ boxShadow: "none", verticalAlign: "middle" }}
+        >
+          <Image
+            fixed={data.reactLogoLight.childImageSharp.fixed}
+            alt={"react-icon-light"}
+            style={{
+              marginRight: rhythm(1 / 2),
+              marginBottom: 0,
+              minWidth: 0,
+              borderRadius: `0%`,
+            }}
+            imgStyle={{
+              borderRadius: `0%`,
+            }}
+          />
+        </a>
+        <a
+          href={`https://graphql.org/`}
+          style={{ boxShadow: "none", verticalAlign: "middle" }}
+        >
+          <Image
+            fixed={data.graphqlLogoLight.childImageSharp.fixed}
+            alt={"graphql-icon-light"}
+            style={{
+              marginRight: rhythm(1 / 2),
+              marginBottom: 0,
+              minWidth: 0,
+              borderRadius: `0%`,
+            }}
+            imgStyle={{
+              borderRadius: `0%`,
+            }}
+          />
+        </a>
+        <a
+          href={`https://www.javascript.com/`}
+          style={{ boxShadow: "none", verticalAlign: "middle" }}
+        >
+          <Image
+            fixed={data.javascriptLogoLight.childImageSharp.fixed}
+            alt={"javascript-icon-light"}
+            style={{
+              marginRight: rhythm(1 / 2),
+              marginBottom: 0,
+              minWidth: 0,
+              borderRadius: `0%`,
+            }}
+            imgStyle={{
+              borderRadius: `0%`,
+            }}
+          />
+        </a>
+        <a
+          href={`https://html.spec.whatwg.org/#is-this-html5?`}
+          style={{ boxShadow: "none", verticalAlign: "middle" }}
+        >
+          <Image
+            fixed={data.htmlLogoLight.childImageSharp.fixed}
+            alt={"html-icon-light"}
+            style={{
+              marginRight: rhythm(1 / 2),
+              marginBottom: 0,
+              minWidth: 0,
+              borderRadius: `0%`,
+            }}
+            imgStyle={{
+              borderRadius: `0%`,
+            }}
+          />
+        </a>
+        <a
+          href={`https://www.w3schools.com/css/`}
+          style={{ boxShadow: "none", verticalAlign: "middle" }}
+        >
+          <Image
+            fixed={data.cssLogoLight.childImageSharp.fixed}
+            alt={"css-icon-light"}
+            style={{
+              marginRight: rhythm(1 / 2),
+              marginBottom: 0,
+              minWidth: 0,
+              borderRadius: `0%`,
+            }}
+            imgStyle={{
+              borderRadius: `0%`,
+            }}
+          />
+        </a>
+      </div>
+    )
+  } else {
+    builtWith = (
+      <div>
+        <a
+          href={`https://www.gatsbyjs.org/`}
+          style={{ boxShadow: "none", verticalAlign: "middle" }}
+        >
+          <Image
+            fixed={data.gatsbyLogo.childImageSharp.fixed}
+            alt={"gatsby-icon"}
+            style={{
+              marginRight: rhythm(1 / 2),
+              marginBottom: 0,
+              minWidth: 0,
+              borderRadius: `0%`,
+            }}
+            imgStyle={{
+              borderRadius: `0%`,
+            }}
+          />
+        </a>
+        <a
+          href={`https://reactjs.org/`}
+          style={{ boxShadow: "none", verticalAlign: "middle" }}
+        >
+          <Image
+            fixed={data.reactLogo.childImageSharp.fixed}
+            alt={"react-icon"}
+            style={{
+              marginRight: rhythm(1 / 2),
+              marginBottom: 0,
+              minWidth: 0,
+              borderRadius: `0%`,
+            }}
+            imgStyle={{
+              borderRadius: `0%`,
+            }}
+          />
+        </a>
+        <a
+          href={`https://graphql.org/`}
+          style={{ boxShadow: "none", verticalAlign: "middle" }}
+        >
+          <Image
+            fixed={data.graphqlLogo.childImageSharp.fixed}
+            alt={"graphql-icon"}
+            style={{
+              marginRight: rhythm(1 / 2),
+              marginBottom: 0,
+              minWidth: 0,
+              borderRadius: `0%`,
+            }}
+            imgStyle={{
+              borderRadius: `0%`,
+            }}
+          />
+        </a>
+        <a
+          href={`https://www.javascript.com/`}
+          style={{ boxShadow: "none", verticalAlign: "middle" }}
+        >
+          <Image
+            fixed={data.javascriptLogo.childImageSharp.fixed}
+            alt={"javascript-icon"}
+            style={{
+              marginRight: rhythm(1 / 2),
+              marginBottom: 0,
+              minWidth: 0,
+              borderRadius: `0%`,
+            }}
+            imgStyle={{
+              borderRadius: `0%`,
+            }}
+          />
+        </a>
+        <a
+          href={`https://html.spec.whatwg.org/#is-this-html5?`}
+          style={{ boxShadow: "none", verticalAlign: "middle" }}
+        >
+          <Image
+            fixed={data.htmlLogo.childImageSharp.fixed}
+            alt={"html-icon"}
+            style={{
+              marginRight: rhythm(1 / 2),
+              marginBottom: 0,
+              minWidth: 0,
+              borderRadius: `0%`,
+            }}
+            imgStyle={{
+              borderRadius: `0%`,
+            }}
+          />
+        </a>
+        <a
+          href={`https://www.w3schools.com/css/`}
+          style={{ boxShadow: "none", verticalAlign: "middle" }}
+        >
+          <Image
+            fixed={data.cssLogo.childImageSharp.fixed}
+            alt={"css-icon"}
+            style={{
+              marginRight: rhythm(1 / 2),
+              marginBottom: 0,
+              minWidth: 0,
+              borderRadius: `0%`,
+            }}
+            imgStyle={{
+              borderRadius: `0%`,
+            }}
+          />
+        </a>
+      </div>
+    )
+  }
 
   return (
-    <Layout>
-      <SEO title="Homepage" />
-      <TwoColumnRow>
-        <LeftAlignedColumn>
-          <h1 style={{ wordWrap: "normal" }}>Hi. I'm João Cachada.</h1>
-          <p>I write code and stories. I also develop video games.</p>
-          <p>
-            I made this website so you can keep up with whatever I'm doing at
-            the moment.
-          </p>
-          <h2>Last Post:</h2>
+    <ThemeProvider>
+      <Layout>
+        <SEO title="Homepage" />
+        <ChangeThemeButton></ChangeThemeButton>
+        <TwoColumnRow>
+          <LeftAlignedColumn>
+            <h1 style={{ wordWrap: "normal" }}>Hi. I'm João Cachada.</h1>
+            <p>I write code and stories. I also develop video games.</p>
+            <p>
+              I made this website so you can keep up with whatever I'm doing at
+              the moment.
+            </p>
+            <h2>Last Post:</h2>
 
-          {lastPost.map(({ node }) => {
-            const title = node.frontmatter.title || node.fields.slug
-            return (
-              <article key={node.fields.slug}>
-                <header>
-                  <h3
-                    style={{
-                      marginBottom: rhythm(1 / 4),
-                    }}
-                  >
-                    <Link to={node.fields.slug}>{title}</Link>
-                  </h3>
-                  <small>{node.frontmatter.date}</small>
-                </header>
-                <section>
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: node.frontmatter.description || node.excerpt,
-                    }}
-                  />
-                </section>
-              </article>
-            )
-          })}
+            {lastPost.map(({ node }) => {
+              const title = node.frontmatter.title || node.fields.slug
+              return (
+                <article key={node.fields.slug}>
+                  <header>
+                    <h3
+                      style={{
+                        marginBottom: rhythm(1 / 4),
+                      }}
+                    >
+                      <Link to={node.fields.slug}>{title}</Link>
+                    </h3>
+                    <small>{node.frontmatter.date}</small>
+                  </header>
+                  <section>
+                    <p
+                      dangerouslySetInnerHTML={{
+                        __html: node.frontmatter.description || node.excerpt,
+                      }}
+                    />
+                  </section>
+                </article>
+              )
+            })}
 
-          <h4>Built with:</h4>
+            <h4>Built with:</h4>
 
-          <a
-            href={`https://www.gatsbyjs.org/`}
-            style={{ boxShadow: "none", verticalAlign: "middle" }}
-          >
-            <Image
-              fixed={data.gatsbyLogo.childImageSharp.fixed}
-              alt={"gatsby-icon"}
-              style={{
-                marginRight: rhythm(1 / 2),
-                marginBottom: 0,
-                minWidth: 0,
-                borderRadius: `0%`,
-              }}
-              imgStyle={{
-                borderRadius: `0%`,
-              }}
-            />
-          </a>
-          <a
-            href={`https://reactjs.org/`}
-            style={{ boxShadow: "none", verticalAlign: "middle" }}
-          >
-            <Image
-              fixed={data.reactLogo.childImageSharp.fixed}
-              alt={"react-icon"}
-              style={{
-                marginRight: rhythm(1 / 2),
-                marginBottom: 0,
-                minWidth: 0,
-                borderRadius: `0%`,
-              }}
-              imgStyle={{
-                borderRadius: `0%`,
-              }}
-            />
-          </a>
-          <a
-            href={`https://graphql.org/`}
-            style={{ boxShadow: "none", verticalAlign: "middle" }}
-          >
-            <Image
-              fixed={data.graphqlLogo.childImageSharp.fixed}
-              alt={"graphql-icon"}
-              style={{
-                marginRight: rhythm(1 / 2),
-                marginBottom: 0,
-                minWidth: 0,
-                borderRadius: `0%`,
-              }}
-              imgStyle={{
-                borderRadius: `0%`,
-              }}
-            />
-          </a>
-          <a
-            href={`https://www.javascript.com/`}
-            style={{ boxShadow: "none", verticalAlign: "middle" }}
-          >
-            <Image
-              fixed={data.javascriptLogo.childImageSharp.fixed}
-              alt={"javascript-icon"}
-              style={{
-                marginRight: rhythm(1 / 2),
-                marginBottom: 0,
-                minWidth: 0,
-                borderRadius: `0%`,
-              }}
-              imgStyle={{
-                borderRadius: `0%`,
-              }}
-            />
-          </a>
-          <a
-            href={`https://html.spec.whatwg.org/#is-this-html5?`}
-            style={{ boxShadow: "none", verticalAlign: "middle" }}
-          >
-            <Image
-              fixed={data.htmlLogo.childImageSharp.fixed}
-              alt={"html-icon"}
-              style={{
-                marginRight: rhythm(1 / 2),
-                marginBottom: 0,
-                minWidth: 0,
-                borderRadius: `0%`,
-              }}
-              imgStyle={{
-                borderRadius: `0%`,
-              }}
-            />
-          </a>
-          <a
-            href={`https://www.w3schools.com/css/`}
-            style={{ boxShadow: "none", verticalAlign: "middle" }}
-          >
-            <Image
-              fixed={data.cssLogo.childImageSharp.fixed}
-              alt={"css-icon"}
-              style={{
-                marginRight: rhythm(1 / 2),
-                marginBottom: 0,
-                minWidth: 0,
-                borderRadius: `0%`,
-              }}
-              imgStyle={{
-                borderRadius: `0%`,
-              }}
-            />
-          </a>
-        </LeftAlignedColumn>
+            {builtWith}
+          </LeftAlignedColumn>
 
-        <RightAlignedColumn>
-          <h2>Current Projects:</h2>
+          <RightAlignedColumn>
+            <h2>Current Projects:</h2>
 
-          <h3>Untitled Videogame</h3>
-          <h4>Last update:</h4>
+            <h3>Untitled Videogame</h3>
+            <h4>Last update:</h4>
 
-          {lastGamePost.map(({ node }) => {
-            const title = node.frontmatter.title || node.fields.slug
-            return (
-              <article key={node.fields.slug}>
-                <header>
-                  <h3
-                    style={{
-                      marginBottom: rhythm(1 / 4),
-                    }}
-                  >
-                    <Link to={node.fields.slug}>{title}</Link>
-                  </h3>
-                  <small>{node.frontmatter.date}</small>
-                </header>
-                <section>
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: node.frontmatter.description || node.excerpt,
-                    }}
-                  />
-                </section>
-              </article>
-            )
-          })}
+            {lastGamePost.map(({ node }) => {
+              const title = node.frontmatter.title || node.fields.slug
+              return (
+                <article key={node.fields.slug}>
+                  <header>
+                    <h3
+                      style={{
+                        marginBottom: rhythm(1 / 4),
+                      }}
+                    >
+                      <Link to={node.fields.slug}>{title}</Link>
+                    </h3>
+                    <small>{node.frontmatter.date}</small>
+                  </header>
+                  <section>
+                    <p
+                      dangerouslySetInnerHTML={{
+                        __html: node.frontmatter.description || node.excerpt,
+                      }}
+                    />
+                  </section>
+                </article>
+              )
+            })}
 
-          <h3>Untitled Book</h3>
-          <h4>Last update:</h4>
+            <h3>Untitled Book</h3>
+            <h4>Last update:</h4>
 
-          {lastBookPost.map(({ node }) => {
-            const title = node.frontmatter.title || node.fields.slug
-            return (
-              <article key={node.fields.slug}>
-                <header>
-                  <h3
-                    style={{
-                      marginBottom: rhythm(1 / 4),
-                    }}
-                  >
-                    <Link to={node.fields.slug}>{title}</Link>
-                  </h3>
-                  <small>{node.frontmatter.date}</small>
-                </header>
-                <section>
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: node.frontmatter.description || node.excerpt,
-                    }}
-                  />
-                </section>
-              </article>
-            )
-          })}
+            {lastBookPost.map(({ node }) => {
+              const title = node.frontmatter.title || node.fields.slug
+              return (
+                <article key={node.fields.slug}>
+                  <header>
+                    <h3
+                      style={{
+                        marginBottom: rhythm(1 / 4),
+                      }}
+                    >
+                      <Link to={node.fields.slug}>{title}</Link>
+                    </h3>
+                    <small>{node.frontmatter.date}</small>
+                  </header>
+                  <section>
+                    <p
+                      dangerouslySetInnerHTML={{
+                        __html: node.frontmatter.description || node.excerpt,
+                      }}
+                    />
+                  </section>
+                </article>
+              )
+            })}
 
-          <link
-            href="https://fonts.googleapis.com/css?family=Raleway:400,300,600,800,900"
-            rel="stylesheet"
-            type="text/css"
-          ></link>
-        </RightAlignedColumn>
-      </TwoColumnRow>
-    </Layout>
+            <link
+              href="https://fonts.googleapis.com/css?family=Raleway:400,300,600,800,900"
+              rel="stylesheet"
+              type="text/css"
+            ></link>
+          </RightAlignedColumn>
+        </TwoColumnRow>
+      </Layout>
+    </ThemeProvider>
   )
 }
 
@@ -331,6 +461,52 @@ export const mostRecentQuery = graphql`
       }
     }
     cssLogo: file(absolutePath: { regex: "/css-icon.png/" }) {
+      childImageSharp {
+        fixed(height: 30, quality: 100) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    gatsbyLogoLight: file(absolutePath: { regex: "/gatsby-icon-light.png/" }) {
+      childImageSharp {
+        fixed(width: 30, height: 30) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    reactLogoLight: file(absolutePath: { regex: "/react-icon-light/" }) {
+      childImageSharp {
+        fixed(height: 30) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    javascriptLogoLight: file(
+      absolutePath: { regex: "/javascript-icon-light.png/" }
+    ) {
+      childImageSharp {
+        fixed(height: 30, quality: 100) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    htmlLogoLight: file(absolutePath: { regex: "/html-icon-light.png/" }) {
+      childImageSharp {
+        fixed(height: 30, quality: 100) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    graphqlLogoLight: file(
+      absolutePath: { regex: "/graphql-icon-light.png/" }
+    ) {
+      childImageSharp {
+        fixed(height: 30, quality: 100) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    cssLogoLight: file(absolutePath: { regex: "/css-icon-light.png/" }) {
       childImageSharp {
         fixed(height: 30, quality: 100) {
           ...GatsbyImageSharpFixed

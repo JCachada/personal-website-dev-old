@@ -12,6 +12,7 @@ module.exports = {
     },
   },
   plugins: [
+    "gatsby-plugin-theme-ui",
     `gatsby-plugin-glamor`,
     {
       resolve: `gatsby-source-filesystem`,
