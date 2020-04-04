@@ -4,6 +4,7 @@ import { rhythm, scale } from "../utils/typography"
 import { useStaticQuery, graphql } from "gatsby"
 import { useColorMode } from "theme-ui"
 import Image from "gatsby-image"
+import ChangeThemeButton from "./change-theme-button"
 
 const Layout = ({ location, title, children }) => {
   const data = useStaticQuery(graphql`
@@ -174,6 +175,9 @@ const Layout = ({ location, title, children }) => {
         >
           About
         </Link>
+        <div style={{ float: "right" }}>
+          <ChangeThemeButton></ChangeThemeButton>
+        </div>
       </h3>
     )
     footer = (
@@ -361,6 +365,9 @@ const Layout = ({ location, title, children }) => {
         >
           About
         </Link>
+        <div style={{ float: "right" }}>
+          <ChangeThemeButton></ChangeThemeButton>
+        </div>
       </h3>
     )
 

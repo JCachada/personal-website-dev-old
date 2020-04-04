@@ -9,7 +9,6 @@ import TwoColumnRow from "../components/two-column-row"
 import Image from "gatsby-image"
 import { ThemeProvider } from "theme-ui"
 import { useColorMode } from "theme-ui"
-import ChangeThemeButton from "../components/change-theme-button"
 
 const Index = ({ data }) => {
   const lastPost = data.mostRecentPost.edges
@@ -251,7 +250,6 @@ const Index = ({ data }) => {
     <ThemeProvider>
       <Layout>
         <SEO title="Homepage" />
-        <ChangeThemeButton></ChangeThemeButton>
         <TwoColumnRow>
           <LeftAlignedColumn>
             <h1 style={{ wordWrap: "normal" }}>Hi. I'm João Cachada.</h1>
