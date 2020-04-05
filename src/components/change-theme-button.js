@@ -22,7 +22,7 @@ const ChangeThemeButton = () => {
         absolutePath: { regex: "/deep-theme-button.png/" }
       ) {
         childImageSharp {
-          fixed(height: 30, quality: 100) {
+          fixed(height: 20, quality: 100) {
             ...GatsbyImageSharpFixed
           }
         }
