@@ -193,7 +193,7 @@ const Layout = ({ location, title, children }) => {
         <footer
           style={{
             paddingTop: `${rhythm(0.6)}`,
-            boxShadow: "0px -1px 1px rgba(35,33,41,1)",
+            boxShadow: "0px -0.5px 0px rgba(35,33,41,1)",
           }}
         >
           <a

@@ -33,15 +33,14 @@ const IsHeAnyGood = ({ location }) => {
       <div>
         <article>
           <header>
-            <h3
+            <h1
               style={{
                 fontSize: "36px",
-                fontWeight: "bold",
                 marginBottom: rhythm(1 / 4),
               }}
             >
               Why is this page called "Am I any good?"
-            </h3>
+            </h1>
           </header>
           <section style={{ marginBottom: 0 }}>
             <p></p>
@@ -70,32 +69,30 @@ const IsHeAnyGood = ({ location }) => {
             </p>
           </section>
           <header>
-            <h3
+            <h1
               style={{
                 fontSize: "28px",
-                fontWeight: "bolder",
                 marginTop: 0,
                 marginBottom: rhythm(1 / 4),
               }}
             >
               So... Am I?
-            </h3>
+            </h1>
           </header>
           <section>
             <p></p>
             <p>Yes!</p>
           </section>
           <header>
-            <h3
+            <h1
               style={{
                 fontSize: "28px",
-                fontWeight: "bold",
                 marginTop: 0,
                 marginBottom: rhythm(1 / 4),
               }}
             >
               Okay. Why?
-            </h3>
+            </h1>
           </header>
           <section>
             <p></p>
@@ -136,16 +133,15 @@ const IsHeAnyGood = ({ location }) => {
             </p>
           </section>
           <header>
-            <h3
+            <h1
               style={{
                 fontSize: "28px",
-                fontWeight: "bold",
                 marginTop: 0,
                 marginBottom: rhythm(1 / 4),
               }}
             >
               Sounds like a lot of corporate talk...
-            </h3>
+            </h1>
           </header>
           <section>
             <p></p>
