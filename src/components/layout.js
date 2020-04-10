@@ -5,6 +5,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import { useColorMode } from "theme-ui"
 import Image from "gatsby-image"
 import ChangeThemeButton from "./change-theme-button"
+import Search from "./search"
 
 const Layout = ({ location, title, children }) => {
   const data = useStaticQuery(graphql`
@@ -193,7 +194,7 @@ const Layout = ({ location, title, children }) => {
         <footer
           style={{
             paddingTop: `${rhythm(0.6)}`,
-            boxShadow: "0px -0.5px 0px rgba(35,33,41,1)",
+            boxShadow: "0px -1px 0px rgba(35,33,41,1)",
           }}
         >
           <a
@@ -368,6 +369,9 @@ const Layout = ({ location, title, children }) => {
         <div style={{ float: "right" }}>
           <ChangeThemeButton></ChangeThemeButton>
         </div>
+        <div style={{ float: "right" }}>
+          <Search></Search>
+        </div>
       </h3>
     )
 
@@ -384,7 +388,7 @@ const Layout = ({ location, title, children }) => {
         <footer
           style={{
             paddingTop: `${rhythm(0.6)}`,
-            boxShadow: "0px -1px 1px rgba(35,33,41,1)",
+            boxShadow: "0px -1px 0px rgba(35,33,41,1)",
           }}
         >
           <a
