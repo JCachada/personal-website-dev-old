@@ -94,7 +94,7 @@ const Layout = ({ location, title, children }) => {
         >
           <ChangeThemeButton></ChangeThemeButton>
         </div>
-        <div style={{verticalAlign: "center" }}>
+        <div style={{ verticalAlign: "center" }}>
           <SearchLight></SearchLight>
         </div>
       </h3>
@@ -552,6 +552,12 @@ const Layout = ({ location, title, children }) => {
         style={{
           boxShadow: "0px 1px 1px 0px rgba(35,33,41,1)",
           padding: `${rhythm(0.7)} ${rhythm(3 / 4)}`,
+        }}
+        css={{
+          display: "block",
+          "@media (min-width: 750px)": {
+            display: "none",
+          },
         }}
       >
         {mobileHeader}
