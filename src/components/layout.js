@@ -60,13 +60,51 @@ const Layout = ({ location, title, children }) => {
 
   let header
   let footer
+  let mobileHeader
 
   const [colorMode] = useColorMode()
 
   if (colorMode === "light") {
+    mobileHeader = (
+      <h3
+        style={{
+          width: "100%",
+          marginBottom: rhythm(0),
+          marginTop: 0,
+        }}
+      >
+        <Link
+          style={{
+            boxShadow: `none`,
+            textDecoration: `none`,
+          }}
+          css={{
+            color: `black`,
+            ":hover": {
+              color: "#2c7aff",
+              textDecoration: `underline`,
+            },
+          }}
+          to={`/`}
+        >
+          Home
+        </Link>
+        <div
+          style={{ float: "right", verticalAlign: "center", paddingTop: "3px" }}
+        >
+          <ChangeThemeButton></ChangeThemeButton>
+        </div>
+        <div style={{verticalAlign: "center" }}>
+          <SearchLight></SearchLight>
+        </div>
+      </h3>
+    )
+  }
+  if (colorMode === "light") {
     header = (
       <h3
         style={{
+          width: "100%",
           marginBottom: rhythm(0),
           marginTop: 0,
         }}
@@ -177,7 +215,9 @@ const Layout = ({ location, title, children }) => {
         >
           About
         </Link>
-        <div style={{ float: "right", verticalAlign: "center", paddingTop:"3px" }}>
+        <div
+          style={{ float: "right", verticalAlign: "center", paddingTop: "3px" }}
+        >
           <ChangeThemeButton></ChangeThemeButton>
         </div>
         <div style={{ float: "right", verticalAlign: "center" }}>
@@ -261,6 +301,35 @@ const Layout = ({ location, title, children }) => {
       </div>
     )
   } else {
+    mobileHeader = (
+      <h3
+        style={{
+          marginBottom: rhythm(0),
+          marginTop: 0,
+        }}
+      >
+        <Link
+          style={{
+            boxShadow: `none`,
+            textDecoration: `none`,
+          }}
+          css={{
+            color: `#c0c0c0`,
+          }}
+          to={`/`}
+        >
+          Home
+        </Link>
+        <div
+          style={{ float: "right", verticalAlign: "center", paddingTop: "3px" }}
+        >
+          <ChangeThemeButton></ChangeThemeButton>
+        </div>
+        <div style={{ verticalAlign: "center" }}>
+          <Search></Search>
+        </div>
+      </h3>
+    )
     header = (
       <h3
         style={{
@@ -370,7 +439,9 @@ const Layout = ({ location, title, children }) => {
         >
           About
         </Link>
-        <div style={{ float: "right", verticalAlign: "center", paddingTop:"3px" }}>
+        <div
+          style={{ float: "right", verticalAlign: "center", paddingTop: "3px" }}
+        >
           <ChangeThemeButton></ChangeThemeButton>
         </div>
         <div style={{ float: "right", verticalAlign: "center" }}>
@@ -468,8 +539,22 @@ const Layout = ({ location, title, children }) => {
           boxShadow: "0px 1px 1px 0px rgba(35,33,41,1)",
           padding: `${rhythm(0.7)} ${rhythm(3 / 4)}`,
         }}
+        css={{
+          display: "none",
+          "@media (min-width: 750px)": {
+            display: "block",
+          },
+        }}
       >
         {header}
+      </header>
+      <header
+        style={{
+          boxShadow: "0px 1px 1px 0px rgba(35,33,41,1)",
+          padding: `${rhythm(0.7)} ${rhythm(3 / 4)}`,
+        }}
+      >
+        {mobileHeader}
       </header>
       {children}
       {footer}
