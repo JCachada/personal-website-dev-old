@@ -1,10 +1,10 @@
-import React, { Component } from 'react'
-import { Link } from 'gatsby'
+import React, { Component } from "react"
+import { Link } from "gatsby"
 
 // Search component
 class Search extends Component {
   state = {
-    query: '',
+    query: "",
     results: [],
   }
 
@@ -16,17 +16,17 @@ class Search extends Component {
             <Link to={page.url} className="link">
               <h4>{page.title}</h4>
             </Link>
-          </div>    
+          </div>
         ))
       } else if (this.state.query.length > 2) {
-        return 'No results for ' + this.state.query
+        return "No results for " + this.state.query
       } else if (
         this.state.results.length === 0 &&
         this.state.query.length > 0
       ) {
-        return 'Please insert at least 3 characters'
+        return "Please insert at least 3 characters"
       } else {
-        return ''
+        return ""
       }
     }
 
@@ -36,8 +36,14 @@ class Search extends Component {
           className="search__input"
           type="text"
           onChange={this.search}
-          placeholder={'Search'}
-          style={{color: "white", backgroundColor: "#232129", border:"none" }}
+          placeholder={"Search"}
+          style={{
+            color: "white",
+            backgroundColor: "#232129",
+            border: "1px solid #585e69",
+            fontSize: "22px",
+          }}
+          css={{ fontsize: "10px" }}
         />
         <div className="search__list">
           <ResultList />
