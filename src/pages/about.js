@@ -12,13 +12,13 @@ const About = ({ location }) => {
       <div>
         <article>
           <header>
-            <h3
+            <h1
               style={{
                 marginBottom: rhythm(1 / 4),
               }}
             >
               About me
-            </h3>
+            </h1>
           </header>
           <section style={{ marginBottom: 0 }}>
             <p></p>
