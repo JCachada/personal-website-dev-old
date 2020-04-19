@@ -41,7 +41,7 @@ const ChangeThemeButton = () => {
 
   let themeImage
 
-  if (colorMode === "dark") {
+  if (colorMode === "dark" || colorMode === "default") {
     themeImage = (
       <Image
         fixed={data.deepThemeButton.childImageSharp.fixed}
@@ -115,7 +115,7 @@ const ChangeThemeButton = () => {
 }
 
 function nextTheme(colorMode) {
-  if (colorMode === "dark") {
+  if (colorMode === "dark" || colorMode === "default") {
     return "deep"
   } else if (colorMode === "deep") {
     return "light"
