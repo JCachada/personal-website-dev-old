@@ -211,6 +211,24 @@ const Layout = ({ location, title, children }) => {
               textDecoration: `underline`,
             },
           }}
+          to={`/cv`}
+        >
+          Résumé
+        </Link>
+        <Link
+          style={{
+            ...scale(0.3),
+            boxShadow: `none`,
+            textDecoration: `none`,
+            paddingLeft: "20px",
+          }}
+          css={{
+            color: `#635e69`,
+            ":hover": {
+              color: "#2c7aff",
+              textDecoration: `underline`,
+            },
+          }}
           to={"/about"}
         >
           About
@@ -420,6 +438,24 @@ const Layout = ({ location, title, children }) => {
           to={`/games`}
         >
           Games
+        </Link>
+        <Link
+          style={{
+            ...scale(0.3),
+            boxShadow: `none`,
+            textDecoration: `none`,
+            paddingLeft: "20px",
+          }}
+          css={{
+            color: `#635e69`,
+            ":hover": {
+              color: "#c0c0c0",
+              textDecoration: `underline`,
+            },
+          }}
+          to={"/cv"}
+        >
+          Résumé
         </Link>
         <Link
           style={{

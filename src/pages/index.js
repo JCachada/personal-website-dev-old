@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import LeftAlignedColumn from "../components/left-aligned-column"
+  import LeftAlignedColumn from "../components/left-aligned-column"
 import { Link, graphql } from "gatsby"
 import { rhythm } from "../utils/typography"
 import RightAlignedColumn from "../components/right-aligned-column"
