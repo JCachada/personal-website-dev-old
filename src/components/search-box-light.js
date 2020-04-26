@@ -1,6 +1,5 @@
 import React, { Component } from "react"
 import { Link } from "gatsby"
-import { useColorMode } from "theme-ui"
 
 // Search component
 class Search extends Component {

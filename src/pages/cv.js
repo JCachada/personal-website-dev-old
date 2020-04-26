@@ -2,9 +2,6 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import React from "react"
 import LeftAlignedColumn from "../components/left-aligned-column"
-import { rhythm } from "../utils/typography"
-import { useStaticQuery, graphql } from "gatsby"
-import Image from "gatsby-image"
 import TwoColumnRow from "../components/two-column-row"
 import RightAlignedColumn from "../components/right-aligned-column"
 import CenteredText from "../components/centered-text"
@@ -13,6 +10,7 @@ const CV = ({ location }) => {
   return (
     <Layout>
       <CenteredText>
+      <SEO title="Résumé" />
         <h1>Want to work with me?</h1>
         <p>
           The first thing you should do if you want to know more about me is
