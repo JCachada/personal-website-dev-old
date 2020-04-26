@@ -4,13 +4,13 @@ import React from "react"
 import LeftAlignedColumn from "../components/left-aligned-column"
 import TwoColumnRow from "../components/two-column-row"
 import RightAlignedColumn from "../components/right-aligned-column"
-import CenteredText from "../components/centered-text"
+import CenteredText from "../components/centered-text-no-bottom-padding"
 
 const CV = ({ location }) => {
   return (
     <Layout>
       <CenteredText>
-      <SEO title="Résumé" />
+        <SEO title="Résumé" />
         <h1>Want to work with me?</h1>
         <p>
           The first thing you should do if you want to know more about me is
@@ -20,7 +20,7 @@ const CV = ({ location }) => {
           section, and my{" "}
           <a href="https://jcachada.dev/mission-statement/">
             mission statement.
-          </a>
+          </a>{" "}
           Those links will function as a cover letter of sorts, and hopefully
           make it clear what kind of person I am. If you think we'd be a good
           match, this page contains my qualifications, my academic and
