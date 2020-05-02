@@ -24,10 +24,7 @@ const BlogIndex = ({ data, location }) => {
           then a period of revising the draft, and finally a period of sending
           it out to beta readers and adjusting acording to their feedback.
           Throughout all of this I will post regular updates as blog posts. The
-          current estimate is that I'll be done with the book this year. If in
-          the meanwhile you want to read some of my existing work, you can read
-          some of my{" "}
-          <a href="https://jcachada.dev/short-stories">short stories</a>.
+          current estimate is that I'll be done with the book this year. 
         </p>
         <SEO title="All posts" />
         {posts.map(({ node }) => {
