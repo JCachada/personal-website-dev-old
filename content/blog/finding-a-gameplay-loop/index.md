@@ -3,7 +3,9 @@ title: "Dev Diaries #1: Finding a Gameplay Loop"
 tags: ["blog", "game", "gamedev"]
 date: "2020-05-02"
 description: "Most people struggle with having too many ideas they can't turn into reality. But what happens when the opposite is true?"
----I understand stories better than I understand game design.
+---
+
+I understand stories better than I understand game design.
 
 That's the crux of current problem with developing my game. I know precisely what story I want to tell and what themes I want to approach - but any game must have a somewhat defined recurring gameplay loop which makes up for the bulk of the player's experience. Coming up with that central gameplay loop is harder than it sounds, at least for me. In this post I'll attempt to make clear what my thought process is on this matter, and why I don't just slap some gameplay onto the game. I will also attempt to make this post into a decision log of sorts, where I lay out the options I've identified so far and their respective pros and cons. Hopefully this process will introduce some clarity, or at the very least it will serve as an historical document.
 

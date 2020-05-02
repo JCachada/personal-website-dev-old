@@ -3,7 +3,6 @@ title: "Book Update #1: First Drafting"
 tags: ["blog", "book"]
 date: "2020-05-02"
 description: "A general update on the state of the book as of May 2020, plus some musings on first drafting."
-
 ---
 
 I've written a lot of "books", all of them absolute garbage and nothing I want to ever see the light of day. 
