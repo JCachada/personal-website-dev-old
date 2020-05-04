@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-  import LeftAlignedColumn from "../components/left-aligned-column"
+import LeftAlignedColumn from "../components/left-aligned-column"
 import { Link, graphql } from "gatsby"
 import { rhythm } from "../utils/typography"
 import RightAlignedColumn from "../components/right-aligned-column"
@@ -293,26 +293,6 @@ const Index = ({ data }) => {
           <RightAlignedColumn>
             <h2>Current Projects:</h2>
 
-            <h3>Untitled Videogame</h3>
-            <h4>Last update:</h4>
-
-            {lastGamePost.map(({ node }) => {
-              const title = node.frontmatter.title || node.fields.slug
-              return (
-                <article key={node.fields.slug}>
-                  <header>
-                    <h3
-                      style={{
-                        marginBottom: rhythm(1 / 4),
-                      }}
-                    >
-                      <Link to={node.fields.slug}>{title}</Link>
-                    </h3>
-                  </header>
-                </article>
-              )
-            })}
-
             <h3>Untitled Book</h3>
             <h4>Last update:</h4>
 
@@ -341,6 +321,34 @@ const Index = ({ data }) => {
               )
             })}
 
+            <h3>Untitled Videogame</h3>
+            <h4>Last update:</h4>
+
+            {lastGamePost.map(({ node }) => {
+              const title = node.frontmatter.title || node.fields.slug
+              return (
+                <article key={node.fields.slug}>
+                  <header>
+                    <h3
+                      style={{
+                        marginBottom: rhythm(1 / 4),
+                      }}
+                    >
+                      <Link to={node.fields.slug}>{title}</Link>
+                    </h3>
+                    <small>{node.frontmatter.date}</small>
+                  </header>
+                  <section>
+                    <p
+                      dangerouslySetInnerHTML={{
+                        __html: node.frontmatter.description || node.excerpt,
+                      }}
+                    />
+                  </section>
+                </article>
+              )
+            })}
+            
             <link
               href="https://fonts.googleapis.com/css?family=Raleway:400,300,600,800,900"
               rel="stylesheet"
