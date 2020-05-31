@@ -293,7 +293,7 @@ const Index = ({ data }) => {
           <RightAlignedColumn>
             <h2>Current Projects:</h2>
 
-            <h3>Untitled Book</h3>
+            <h3>The Life Collectors</h3>
             <h4>Last update:</h4>
 
             {lastBookPost.map(({ node }) => {

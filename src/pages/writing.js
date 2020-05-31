@@ -15,16 +15,16 @@ const BlogIndex = ({ data, location }) => {
       <CenteredText>
         <h1>State of the Art</h1>
 
-        <h4>Last updated: April 2020</h4>
+        <h4>Last updated: June 2020</h4>
 
         <p>
-          I am currently in the process of finishing the first draft of my
-          current novel. I am around 110 thousand words in, after which there
-          will be a period of downtime while I get some distance from the draft,
-          then a period of revising the draft, and finally a period of sending
-          it out to beta readers and adjusting acording to their feedback.
-          Throughout all of this I will post regular updates as blog posts. The
-          current estimate is that I'll be done with the book this year. 
+          I have started the second draft of my novel. I am around 10 thousand
+          words in, after which there will be a period of downtime while I get
+          some distance from the draft, then a period of revising the draft, and
+          finally a period of sending it out to beta readers and adjusting
+          acording to their feedback. Throughout all of this I will post regular
+          updates as blog posts. The current estimate is that I'll be done with
+          the book this year.
         </p>
         <SEO title="All posts" />
         {posts.map(({ node }) => {
