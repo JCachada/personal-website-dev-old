@@ -17,7 +17,7 @@ Thanks for keeping up with what I've been doing, and I hope I can get my work to
 
 ## Current state of things
 
-As it stands, I'm about 5 thousand words in and working on the second draft  as outlined above. Considering that I want to have this book finished this year, and that there's still a part of the process missing involving beta readers, I'm going to kick things up to eleven and set a goal for this month of revising at least 35, but ideally 40 thousand words of the first draft. This will take a lot of time if I want to make sure that the quality remains high, but it's a challenge I want to impose myself.
+As it stands, I'm about 5 thousand words in and working on the second draft  as outlined above. Considering that I want to have this book finished this year, and that there's still a part of the process missing involving beta readers, I'm going to kick things up to eleven and set a goal for this month of revising at least 35, but ideally 40 thousand words of the first draft. This will take a lot of time if I want to make sure that the quality remains high, but it's a challenge I want to impose on myself.
 
 **Current word count**: 5 thousand words (second draft).
 **June goal**: Revise 35 to 40 thousand words.
