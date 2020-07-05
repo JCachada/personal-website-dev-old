@@ -11,7 +11,7 @@ Last month I said I was iterating on gameplay loops to try and find something th
 
 The game is being developed on Godot Engine, and Godot uses the concept of a [scene tree.](https://docs.godotengine.org/en/stable/getting_started/step_by_step/godot_design_philosophy.html) Understanding Godot's design philosophy is extremely important to make sure things work properly in the end and you can assemble the different blocks in a single scene without everything being very cumbersome to change. From my understanding of it, the design rules for designing a game's scenes are very similar to the design rules for designing, say, APIs. One of the most important questions you'll have to answer in both is what the responsibilities are for specific classes. Generally speaking, in software, it's a good idea to follow the *Single Responsibility Principle* (SRP). According to Wikipedia, the SRP states that:
 
-> every module or class should have responsibility over a single part of the functionality provided by the software, and that responsibility should be entirely encapsulated by the class, module or function.
+`every module or class should have responsibility over a single part of the functionality provided by the software, and that responsibility should be entirely encapsulated by the class, module or function.`
 
 This is just a fancy way of saying that your classes should do one thing, and one thing alone. 
 
