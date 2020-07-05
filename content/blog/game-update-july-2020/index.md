@@ -15,7 +15,7 @@ The game is being developed on Godot Engine, and Godot uses the concept of a [sc
 
 This is just a fancy way of saying that your classes should do one thing, and one thing alone. 
 
-In Godot, the Scene's responsibility is that of *orchestrating* everything else. So, for a combat scenario where you have a character fighting a monster, the character and the monster handle themselves. They know when they get hit, when they're supposed to change their animation, etc. But the scene is what controls everything they don't know themselves; for instance, the GUI, their relative positions, and the likes. 
+In Godot, the Scene's responsibility is that of *orchestrating* everything else. So, for a combat scenario where you have a character fighting a monster, the character and the monster handle themselves. They know when they get hit, when they're supposed to change their animation, and in general can behave without input from other classes. But the scene is what controls everything they don't know themselves; for instance, the GUI, their relative positions, and whatever information they need to react to that they don't have in their own class.
 
 With that in mind, let's check what the composition was for the scene that I assembled containing the proof of concept for 2D combat.
 
@@ -23,7 +23,7 @@ With that in mind, let's check what the composition was for the scene that I ass
 
 You can see there are four main components in the scene: the player character, a monster (here represented by a nice little ghost), an obstacle in the form of a pillar, and the GUI controlling the player's health and stamina.
 
-Keeping in line with what I mentioned before, let's look at what the code looks like in the actual scene's code.
+Keeping in line with what I mentioned before, let's look at what the code looks like in the actual scene's file.
 
 ```python
 func _ready():
@@ -44,13 +44,13 @@ func _on_Player_update_Healthbar(health):
 ```
 <p>
 
-There are three things here: first, the ready function, that starts the whole scene. It spawns the player at a particular position, does the same to the mob, and sets the GUI to show full health and stamina. The player and the mob both control their own health - it wouldn't make any sense for the scene orchestrating them to control it. But it does make sense for the scene to orchestrate the GUI to match the player's health, and since the player class always spawns the player at full health and stamina when instanced, we can just set the GUI to show full health and stamina. In a full production level, we could make the scene set the GUI values to `$Player.currentHealth` instead of 100.
+There are three things here: first, the ready function, that starts the whole scene. It spawns the player at a particular position, does the same for the mob, and sets the GUI to show full health and stamina. The player and the mob both control their own health - it wouldn't make any sense for the scene orchestrating them to control it. But it does make sense for the scene to orchestrate the GUI to match the player's health, and since the player class always spawns the player at full health and stamina when instanced, we can just set the GUI to show full health and stamina. In a full production level, we could make the scene set the GUI values to `$Player.currentHealth` instead of 100.
 
-The second function is `on_Mob_shoot`. You might be wondering why spawning the bullet that the monster shoots is the responsibility of the scene, and not the responsibility of the monster. The easy reply is that the monster class doesn't have all the information required to spawn the bullet itself. The bullet needs to be spawned pointing towards the player character's position, and the monster has no idea what the player character's position is. Besides, the monster has to spawn the bullet in a specific position in the actual scene, and the only class that can do that is the scene itself. If the monster is the child of the scene, and the bullet is a child of the scene too that will exist and behave independently of the monster, then the bullet needs to be a child of the scene as well, and not a child of the monster.
+The second function is `on_Mob_shoot`. You might be wondering why spawning the bullet that the monster shoots is the responsibility of the scene, and not the responsibility of the monster. The easy reply is that the monster class doesn't have all the information required to spawn the bullet itself. The bullet needs to be spawned pointing towards the player character's position, and the monster has no idea what the player character's position is. Besides, the monster has to spawn the bullet in a specific position in the actual scene, and the only class that can do that is the scene itself. If the monster is the child of the scene, and the bullet is a child of the scene too - one that will exist and behave independently of the monster - then the bullet needs to be a child of the scene as well, and not a child of the monster.
 
 Lastly, there is `_on_Player_update_Healthbar`. This function, like the last one, is a signal - meaning it triggers when something else happens that emits the signal this function is listening for. In this case, the trigger would be the player's health updating. If the player knows that it got shot, and updates his own health accordingly, then the scene, that has control of the GUI, should make sure the GUI reflects the update in the player's health. If we were doing stamina management as well, there should be another function listening in for when the player updates his own stamina. However, for the proof of concept, there is still no stamina management implemented.
 
-I won't give a detailed look into the Player class in this game, mainly because I feel like it deserves a blog post of its own in the future. In rough terms, the Player class takes input from the user and can move and attack. Besides that, it can take damage, and it will die if it takes too much damage.
+I won't give a detailed look into the Player class in this game, mainly because I feel like it deserves a blog post of its own in the future. In rough terms, the Player class takes input from the user and can move and attack. Besides that, it can take damage, and it will die if it takes too much of it.
 
 I will, however, go into a big challenge that I found when implementing the Monster class: pathfinding, or enemy AI in general.
 
@@ -111,7 +111,7 @@ func _update_path():
 
 Oof, that's a lot to unpack.
 
-First off, the _process function. This is a function that runs on every frame that the game renders. It's useful for things that need to constantly be recalculated, like, for instance, what the best path to take is.
+First off, the `_process` function. This is a function that runs on every frame that the game renders. It's useful for things that need to constantly be recalculated, like, for instance, what the best path to take is.
 
 The first thing we do is check if the mob should be moving or not. This is a simple flag to add that can save a lot of computation later. If the mob shouldn't be moving, there is no need to do any path calculation whatsoever, so we can make sure we're not using any processing power doing that if the flag says it's not needed. 
 
@@ -119,14 +119,14 @@ Then, we determine where the monster needs to move from, and where it needs to m
 
 What follows is a simple animation check to deal with the sprites. If the player is to the left of the monster, we need to make sure the sprite is facing left. If the player is to the right of the monster, we need to make sure the sprite is facing right. Otherwise, the monster would look like it's moonwalking towards the player sometimes. It's a ghost, but it has no eyes on its back! 
 
-Then, we jump to the updatePath() function. This was the saving grace of my development process. I tried for hours to find a way to algorithmically calculate what the best way to dodge a specific obstacle would be for the monster. Among other things, I tried:
+Then, we jump to the `updatePath()` function. This was the saving grace of my development process. I tried for hours to find a way to algorithmically calculate what the best way to dodge a specific obstacle would be for the monster. Among other things, I tried:
 
 - Having collision boxes on the obstacles and the monster. When the monster met an object, it would calculate the distance it was between itself and the top and the bottom of the obstacle, then it would try to go around it through the shortest possible path. This didn't work very well for situations where there were multiple obstacles: the monster would try to go around one, then bump into another, try to go around that one, and end up moving away from the player instead of taking a different path that was a bit longer but allowed it to actually chase its prey.
 - Having the monster hit the obstacles at a slight angle. This way, it would sort of slide off the pillar and eventually be able to move around it before continuing to chase the player in a straight line. This also didn't work great with multiple obstacles, because then the monster could easily get stuck if there was no place it could slide to.
 
-That's when I found out about [Navigation2D.](https://docs.godotengine.org/en/stable/classes/class_navigation2d.html). It turns out Godot already provided the functionality of pathfinding I wanted to implement: all I needed to do was create a Navigation2D node and declare what the "walkable" area of the scene was. Any area outside that wouldn't be considered valid for pathfinding purposes, making the monster path around it. I added a Navigation2D that excluded the pillar, and made the monster update its own path by checking that node instead of trying to calculate it programatically. The update_path function then returns an array of points the monster would have to move to in sequence in order to reach the player.
+That's when I found out about [Navigation2D.](https://docs.godotengine.org/en/stable/classes/class_navigation2d.html). It turns out Godot already provided the functionality of pathfinding I wanted to implement: all I needed to do was create a Navigation2D node and declare what the "walkable" area of the scene was. Any area outside that wouldn't be considered valid for pathfinding purposes, making the monster path around it. I added a Navigation2D that excluded the pillar, and made the monster update its own path by checking that node instead of trying to calculate it programatically. The `update_path` function then returns an array of points the monster would have to move to in sequence in order to reach the player.
 
-The rest of the process function just executes on that array, by moving to each point in sequence while there are points to move to. This movement can now be in a straight line, because the points themselves will already illustrate the path that the monster needs to move around. If there aren't any points to move to left, the monster just stops moving. There is a collision box checking when it is close enough to the player and toggling the "stop moving" flag when the monster is close enough to shoot, so the monster never actually runs out of path to follow; what happens is that when it gets close enough, it stops processing the path. When the player leaves the monster's range, the flag gets toggled, and the monster begins processing the path again on every frame. 
+The rest of the process function just executes on that array, by moving to each point in sequence while there are points to move to. This movement can now be in a straight line, because the points themselves will already illustrate the path that the monster needs to move around. If there aren't any points left to move to, the monster just stops moving. There is a collision box checking when it is close enough to the player and toggling the "stop moving" flag when the monster is close enough to shoot, so the monster never actually runs out of path to follow; what happens is that when it gets close enough, it stops processing the path. When the player leaves the monster's range, the flag gets toggled, and the monster begins processing the path again on every frame. 
 
 Here's what it looks like in motion:
 

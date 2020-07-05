@@ -297,7 +297,7 @@ const Layout = ({ location, title, children }) => {
             />
           </a>
           <a
-            href={`https://github.com/JCachada`}
+            href={`https://discord.gg/wUFus9E`}
             style={{ boxShadow: "none", verticalAlign: "middle" }}
           >
             <Image
@@ -540,7 +540,7 @@ const Layout = ({ location, title, children }) => {
             />
           </a>
           <a
-            href={`https://github.com/JCachada`}
+            href={`https://discord.gg/wUFus9E`}
             style={{ boxShadow: "none", verticalAlign: "middle" }}
           >
             <Image
