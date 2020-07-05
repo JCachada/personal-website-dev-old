@@ -1,0 +1,37 @@
+---
+title: "Book Update #3: Balance in the opening, and the problem with exposition"
+tags: ["blog", "book"]
+date: "2020-07-05"
+description: "A general update on the state of the book as of July 2020, and some musings on how to do exposition right."
+---
+
+After I finished the first draft and revised five thousand words last month, I set a lofty goal for this month's book update. Unfortunately, things were a bit slower than I'd hoped, mainly due to certain problems that needed to be adressed in the starting chapters. The silver lining is that handling those problems allowed me to reflect on some aspects of the writing process for long enough that I can leverage them into a blog post. As always, if all you're interested in is a word count update, feel free to jump to the end of this page.
+
+## And the Empire was huge - the problem with exposition
+
+Perhaps one of the first pieces of advice every writer hears multiple times throughout the course of his career is *show, don't tell*. This "rule" is supposed to help you with making sure your prose isn't hard to read. Quite often, especially in fantasy, young authors start with a healthy passion for the worlds their favorite authors built, from the dizzying expansiveness of Tolkien's mythology to the intricacies of Brandon Sanderson's magic systems. This passion is undoubtedly beneficial, and in no small part it is why people want to write. You see those myths, those people, those worlds, and you think to yourself: "maybe I could do that."
+
+But sometimes, in the quest to mimic those, depth can be confused with detail. On the one hand, the depth in Tolkien's work comes as much from the sheer quantity of backstory he wrote for that world. On the other hand, if you were to read or watch *Lord of the Rings*, you probably wouldn't know anything about Húrin - because you don't have to know anything about Húrin to follow the story to the fullest, and because including that whole backstory would probably have harmed the story in other ways: for instance, by affecting its pacing. 
+
+The same is true of something like Brandon Sanderson's books. The magic systems Sanderson cooks up are usually extremely detailed. Something like Allomancy has several internal rules that determine how everything functions in the internal logic of the universe. But if Sanderson started *Mistborn* with an in-depth discussion of how Allomancy works, most readers would get bored pretty quickly. It's hard to connect to a story unless something in it speaks to you, and the product of worldbuilding needs to be realized into avatars of sorts (characters or not) that cash in on all that work. It's sort of like backend and frontend in software. The backend is running the show, and unless it's well done things quite simply won't work. But the frontend is what your users will interact with. Its quality determines how much they like your program or application, how good it feels to use. You can have the fastest backend in the world (in this analogy, this would mean Tolkien-esque worldbuilding), but if your frontend is just a console, people will choose to use prettier, snappier applications (in this analogy, the frontend would be your characters, your plot, anything you use to pass out the information to the readers in an appealing way). 
+
+In my book, I have both an out of the ordinary setting, and an out of the ordinary magic system. Without getting too much into spoiler territory, the setting is one where being sad, miserable, or otherwise with a very serious case of the blues is a big no-no, bordering on a crime against the state. And the magic system that naturally follows is predicated on the concept of emotional manipulation. 
+
+It's a pair of ideas that is at the core of much of the conflict and themes of the book, but very hard to execute properly. 
+
+The more alien the elements of the story are, the more explanation they need to make sure they don't alienate the readers. Of course everyone likes originality, new settings, new concepts: but there is a balance to find in it where you have to layer the new concepts with familiarity, otherwise people will just be confused. If the characters in your story act, think, and feel nothing like the people we know and interact with, even if there's a good logical reason for it, there's a good chance a lot of the readers won't be able to connect to them. And emotional connection is at the core of every good story. 
+
+When I was revising the first couple of chapters in my book, I realized some things related to this problem needed work. I didn't really explain at all what the magic system was about until a bit later into the chapter, and I realized it could be quite frustrating to hear all the characters talk about it without having any idea what they meant. At the same time, I had to find a way to insert some explanation as to what the magic system was. I could have sat two characters down and made one of them explain everything to the other, but that seems sloppy and not very interesting; it would have just been a proxy for me to explain things directly to the reader. Instead, I added an entirely new scene before the story starts - a prologue of sorts - that tells a self-contained, quite short story about the consequences of using this magic system and how it affects people. I tell this short story through the eyes of the main character, but years before the main story of the book begins. I feel like it does a fairly good job of illustrating the magic system, the setting it exists in, and sets up some character traits for the main character, but does so with things happening in that front, instead of just doing it through exposition. 
+
+Of course, this prologue was new writing altogether, so it had to go through the whole process of writing, revising, then revising again. That's the main reason things were a bit slower with the revision than I had thought - but I'm confident the book was made better for it, which is really all that matters in the end.
+
+It'll be quite interesting when I send the book to beta readers to actually see if they're confused by what happens in the first few chapters or not, specifically when it comes to the setting and magic system. It's hard for me to have the distance required to know whether or not things need further explanation, because I know how everything works already. It's sort of how a power user won't really notice that a menu is confusing, because he's used it thousands of times before, so he knows where everything is. I've done my best to find a balance with this, but I won't really know if it worked until I get other people's opinion on it.
+
+Something tells me that, like much of my writing (and my creative endeavors in general), it'll end up being mostly an iterative process.
+
+## Current state of things
+
+Adding the new scene and reworking exposition in the first few chapters required some new writing that slowed down the revision process. For this reason, I didn't meet the word count goal for this month. However, I still revised a little over ten thousand words and tightened up the beginning of the book a lot. I will carry over the same goal for the month of July.
+
+**Current word count**: 16.195 thousand words (second draft).
+**June goal**: Go up to 35 to 40 thousand words in the second draft.
