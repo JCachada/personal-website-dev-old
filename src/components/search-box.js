@@ -36,12 +36,13 @@ class Search extends Component {
           className="search__input"
           type="text"
           onChange={this.search}
-          placeholder={"Search"}
+          placeholder={"  Search"}
           style={{
             color: "white",
             backgroundColor: "#232129",
             border: "1px solid #585e69",
             fontSize: "22px",
+            borderRadius: "10px",
           }}
           css={{ fontsize: "10px" }}
         />

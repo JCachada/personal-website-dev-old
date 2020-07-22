@@ -293,8 +293,7 @@ const Index = ({ data }) => {
           <RightAlignedColumn>
             <h2>Current Projects:</h2>
 
-            <h3>The Life Collectors</h3>
-            <h4>Last update:</h4>
+            <h4>Last update: THE LIFE COLLECTORS</h4>
 
             {lastBookPost.map(({ node }) => {
               const title = node.frontmatter.title || node.fields.slug
@@ -321,8 +320,8 @@ const Index = ({ data }) => {
               )
             })}
 
-            <h3>Untitled Videogame</h3>
-            <h4>Last update:</h4>
+            <h4>Last update: UNTITLED VIDEO GAME</h4>
+            
 
             {lastGamePost.map(({ node }) => {
               const title = node.frontmatter.title || node.fields.slug
