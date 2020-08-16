@@ -34,4 +34,4 @@ Something tells me that, like much of my writing (and my creative endeavors in g
 Adding the new scene and reworking exposition in the first few chapters required some new writing that slowed down the revision process. For this reason, I didn't meet the word count goal for this month. However, I still revised a little over ten thousand words and tightened up the beginning of the book a lot. I will carry over the same goal for the month of July.
 
 **Current word count**: 16.195 thousand words (second draft).
-**June goal**: Go up to 35 to 40 thousand words in the second draft.
+**July goal**: Go up to 35 to 40 thousand words in the second draft.

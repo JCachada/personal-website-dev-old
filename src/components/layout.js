@@ -25,13 +25,6 @@ const Layout = ({ location, title, children }) => {
           }
         }
       }
-      discord: file(absolutePath: { regex: "/discord-icon.png/" }) {
-        childImageSharp {
-          fixed(width: 30, height: 30) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
       instagramLight: file(
         absolutePath: { regex: "/instagram-icon-light.png/" }
       ) {
@@ -42,13 +35,6 @@ const Layout = ({ location, title, children }) => {
         }
       }
       githubLight: file(absolutePath: { regex: "/github-icon-light.png/" }) {
-        childImageSharp {
-          fixed(width: 30, height: 30) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
-      discordLight: file(absolutePath: { regex: "/discord-icon-light.png/" }) {
         childImageSharp {
           fixed(width: 30, height: 30) {
             ...GatsbyImageSharpFixed
@@ -296,25 +282,6 @@ const Layout = ({ location, title, children }) => {
               }}
             />
           </a>
-          <a
-            href={`https://discord.gg/wUFus9E`}
-            style={{ boxShadow: "none", verticalAlign: "middle" }}
-          >
-            <Image
-              fixed={data.discordLight.childImageSharp.fixed}
-              alt={"discord-icon-light"}
-              style={{
-                marginRight: rhythm(1 / 2),
-                marginBottom: 0,
-                marginTop: 0,
-                minWidth: 0,
-                borderRadius: `0%`,
-              }}
-              imgStyle={{
-                borderRadius: `0%`,
-              }}
-            />
-          </a>
         </footer>
       </div>
     )
@@ -527,25 +494,6 @@ const Layout = ({ location, title, children }) => {
             <Image
               fixed={data.github.childImageSharp.fixed}
               alt={"github-icon"}
-              style={{
-                marginRight: rhythm(1 / 2),
-                marginBottom: 0,
-                marginTop: 0,
-                minWidth: 0,
-                borderRadius: `0%`,
-              }}
-              imgStyle={{
-                borderRadius: `0%`,
-              }}
-            />
-          </a>
-          <a
-            href={`https://discord.gg/wUFus9E`}
-            style={{ boxShadow: "none", verticalAlign: "middle" }}
-          >
-            <Image
-              fixed={data.discord.childImageSharp.fixed}
-              alt={"discord-icon"}
               style={{
                 marginRight: rhythm(1 / 2),
                 marginBottom: 0,
