@@ -68,7 +68,7 @@ export const pageQuery = graphql`
       }
     }
     allMarkdownRemark(
-      filter: { frontmatter: { tags: { in: "game" } } }
+      filter: { frontmatter: { tags: { in: "gamedev" } } }
       sort: { fields: frontmatter___date, order: DESC }
     ) {
       edges {

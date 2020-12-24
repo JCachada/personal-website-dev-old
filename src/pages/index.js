@@ -383,7 +383,7 @@ export const mostRecentQuery = graphql`
       }
     }
     mostRecentGamePost: allMarkdownRemark(
-      filter: { frontmatter: { tags: { in: "game" } } }
+      filter: { frontmatter: { tags: { in: "gamedev" } } }
       sort: { fields: frontmatter___date, order: DESC }
       limit: 1
     ) {
