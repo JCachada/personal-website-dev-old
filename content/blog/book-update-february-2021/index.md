@@ -1,5 +1,5 @@
 ---
-title: "Book Update #6: "
+title: "Book Update #6: Mea Culpa, or 'Shit happens'"
 tags: ["blog", "book"]
 date: "2021-02-18"
 description: "A general update on the state of the book as of February 2021, and why the updates stopped for a little while."
