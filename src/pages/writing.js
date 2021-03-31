@@ -15,7 +15,7 @@ const BlogIndex = ({ data, location }) => {
       <CenteredText>
         <h1>State of the Art</h1>
 
-        <h4>Last updated: September 2020</h4>
+        <h4>Last updated: March 2021</h4>
 
         <p>
           I have started the second draft of my novel. I am around 16 thousand
