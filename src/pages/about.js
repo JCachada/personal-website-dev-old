@@ -46,8 +46,8 @@ const About = ({ location }) => {
               <p></p>
               <p>
                 If you find a bug or want to ask a question, feel free to
-                message me on Github! You can also reach me at jcachada AT
-                tutanota DOT com. If you want to work with me, use the toolbar
+                message me on Github! You can also reach me at jmcs.cachada AT
+                pm DOT me. If you want to work with me, use the toolbar
                 to check out my résumé. If you just want to follow me and my
                 projects, follow me on instagram (the link is in the footer) and
                 check out the Writing and Games section.
