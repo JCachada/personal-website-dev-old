@@ -133,7 +133,7 @@ const CV = ({ location }) => {
           </ul>
           <h1>Contact Me:</h1>
           <p>
-            Reach me at jcachada AT tutanota DOT com, or contact me through{" "}
+            Reach me at jmcs.cachada AT pm DOT me, or contact me through{" "}
             <a href="https://www.linkedin.com/in/joão-cachada-4178a017b">
               LinkedIn.
             </a>
