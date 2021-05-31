@@ -15,7 +15,7 @@ const BlogIndex = ({ data, location }) => {
       <SEO title="Game Development" />
         <h1>State of the Art</h1>
 
-        <h4>Last updated: August 2020</h4>
+        <h4>Last updated: May 2021</h4>
 
         <p>
           The development of this game is indefinitely postponed while I focus on finishing my book.
