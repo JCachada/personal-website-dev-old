@@ -18,14 +18,10 @@ const BlogIndex = ({ data, location }) => {
         <h4>Last updated: August 2020</h4>
 
         <p>
-          I'm currently on the very early stages of developing this game. I have
-          set up most of the essential systems to sustain it, like dialogue,
-          saving games, basic movement and enemy AIs, etc. I am currently
-          iterating on gameplay loops to find something that I find engaging and
-          that fits the game. You can follow the game's progress on its{" "}
-          <a href="https://github.com/JCachada/untitledgame">github</a>,
-          although on the early stages of development a lot of the iteration
-          involves no code, so you'll see less commits. I'll still post updates as blog posts as I go.
+          The development of this game is indefinitely postponed while I focus on finishing my book.
+          You can follow my previous experiments with various game mechanics on my{" "}
+          <a href="https://github.com/JCachada/gamedevsandbox">github</a>. I will return to the game once
+          the book is finished.
         </p>
 
         <SEO title="All posts" />

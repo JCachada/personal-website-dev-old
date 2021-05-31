@@ -15,4 +15,4 @@ During the month of April, you can expect a blog post as well (in addition to th
 ## Current state of things
 
 **Current word count**: 54.764
-**February goal**: 65.000 words on the second draft.
+**April goal**: 65.000 words on the second draft.

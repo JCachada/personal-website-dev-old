@@ -18,7 +18,7 @@ const BlogIndex = ({ data, location }) => {
         <h4>Last updated: March 2021</h4>
 
         <p>
-          I have started the second draft of my novel. I am around 16 thousand
+          I have started the second draft of my novel. I am around 60 thousand
           words in, after which there will be a period of downtime while I get
           some distance from the draft, then a period of revising the draft, and
           finally a period of sending it out to beta readers and adjusting
