@@ -293,7 +293,7 @@ const Index = ({ data }) => {
           <RightAlignedColumn>
             <h2>Current Projects:</h2>
 
-            <h4>Last update: THE LIFE COLLECTORS</h4>
+            <h4>Last update: UNTITLED BOOK</h4>
 
             {lastBookPost.map(({ node }) => {
               const title = node.frontmatter.title || node.fields.slug
