@@ -30,7 +30,21 @@ const CV = ({ location }) => {
       <TwoColumnRow>
         <LeftAlignedColumn>
           <h1>Work Experience:</h1>
-          <h2>2019 - Current</h2>
+          <h2>2022 - Current</h2>
+          <p>
+            <b>Senior Backend Engineer</b> @{" "}
+            <a href="https://primer.io/">Primer.</a>
+          </p>
+          <ul style={{ paddingLeft: "30px" }}>
+            <li>
+              Developing and maintaining the application framework for{" "}
+              <a href="https://primer.io/">Primer</a>.
+            </li>
+            <li>
+              Usage of several different technologies, like Python, AWS and Kafka.
+            </li>
+          </ul>
+          <h2>2019 - 2022</h2>
           <p>
             <b>Software Engineer</b> @{" "}
             <a href="https://www.farfetch.com/pt/">Farfetch.</a>
