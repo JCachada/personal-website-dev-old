@@ -2,7 +2,7 @@
   This website is deprecated as of January 7th, 2023.
 </h1>
 
- I have a new repository / blog built on hugo. This website can still be cloned and run if you're interested in how it used to look.
+ I have a new repository / blog built with the hugo static site generator. This website can still be cloned and run if you're interested in how it used to look.
 
 <h1>
   J. Cachada: Personal Website Made with Gatsby
