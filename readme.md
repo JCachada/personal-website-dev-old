@@ -20,5 +20,3 @@ If you have any questions, feel free to open an issue or contact me directly on 
 </h1>
 
 Clone the repository, and then run "gatsby develop" on the command line while on the repository's folder to play with the development version, or "gatsby build", then "gatsby serve -o" to see the production website.
-
-You can also visit the deployed version at <a href="https://jcachada.dev">jcachada.dev</a>.
